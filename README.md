@@ -54,6 +54,7 @@ Steps to configure in development environment
         public ContactEntity ContactEntity { get; set; }
     }
 
+# Models 
 The following are the Models which will be used to send the data back to client
 
     public class Contact
