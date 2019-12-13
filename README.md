@@ -1,6 +1,12 @@
 # Contact Web Api
 
-This Web Api uses .Net core 3.0
+This Web Api uses following technologies
+.Net core 3.0
+Entity Framework
+Auto Mapper
+Sql Server
+Swagger
+
 
 Steps to configure in development environment
 
