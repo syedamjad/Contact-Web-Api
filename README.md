@@ -12,7 +12,7 @@ Steps to configure in development environment
 
 Database Entities
 
-Contact Entity
+    Contact Entity
 
     public class ContactEntity
     {
@@ -54,3 +54,37 @@ Contact Entity
         public ContactEntity ContactEntity { get; set; }
     }
 
+The following are the Models which will be used to send the data back to client
+
+    public class Contact
+    {
+        public int Id { get; set; }
+
+        public string FirstName { get; set; }
+
+        public string LastName { get; set; }
+
+        public DateTime DateOfBirth { get; set; }
+
+        public List<Email> Emails { get; set; }
+
+        public List<PhoneNumber> PhoneNumbers { get; set; }
+    }
+    
+    public class Email
+    {
+        public int Id { get; set; }
+
+        public string MailAddress { get; set; }
+
+        public Contact Contact { get; set; }
+    }
+    
+    public class PhoneNumber
+    {
+        public int Id { get; set; }
+
+        public string Number { get; set; }
+
+        public Contact Contact { get; set; }
+    }
