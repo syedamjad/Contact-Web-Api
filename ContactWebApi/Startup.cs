@@ -1,17 +1,14 @@
-using ContactWebApi.Dal;
-using ContactWebApi.Repository;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Hosting.Internal;
-using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.Swagger;
-
 namespace ContactWebApi
 {
+    using Dal;
+    using Repository;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
+    using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
+    using Microsoft.OpenApi.Models;
 
     public class Startup
     {

@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
-using AutoMapper.QueryableExtensions;
-using ContactWebApi.Dal;
-using ContactWebApi.Entity;
-using ContactWebApi.Models;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-
-namespace ContactWebApi.Repository
+﻿namespace ContactWebApi.Repository
 {
+    using AutoMapper;
+    using AutoMapper.QueryableExtensions;
+    using Dal;
+    using Entity;
+    using Models;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.Configuration;
+    using System.Collections.Generic;
+    using System.Linq;
+    
     public class ContactRepository : IContactRepository
     {
         private readonly ContactContext contactContext;

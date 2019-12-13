@@ -1,7 +1,7 @@
 ﻿namespace ContactWebApi.Controllers
 {
-    using ContactWebApi.Models;
-    using ContactWebApi.Repository;
+    using Models;
+    using Repository;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Logging;
 
@@ -22,16 +22,6 @@
         [Route("api/GetContacts")]
         public IActionResult GetContacts()
         {
-            //var rng = new Random();
-            //return Enumerable.Range(1, 5).Select(index => new Contact
-            //{
-            //    DateOfBirth = DateTime.Now.AddDays(index),
-            //    FirstName = "amjad",
-            //    LastName = "amjad",
-            //    Emails = new List<string> {"sdf","sdf","sdf" },
-            //    PhoneNumbers = new List<string> { "er", "sdf", "sdf"}
-            //})
-            //.ToArray();
             var contacts = this.contactRepository.GetContacts();
             return Ok(contacts);
         }

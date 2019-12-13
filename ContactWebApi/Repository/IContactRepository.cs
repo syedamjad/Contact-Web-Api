@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using ContactWebApi.Models;
-
-namespace ContactWebApi.Repository
+﻿namespace ContactWebApi.Repository
 {
+    using Models;
+    using System.Collections.Generic;
+    
     public interface IContactRepository
     {
         IEnumerable<Contact> GetContacts();
