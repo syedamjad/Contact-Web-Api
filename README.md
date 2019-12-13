@@ -10,7 +10,7 @@ Steps to configure in development environment
 4. Go to Package Manager Console to create database -> type "Update-Database" command in the console.
 5. Cross check that database is created successfully
 
-Database Entities
+# Database Entities
 
     Contact Entity
 
