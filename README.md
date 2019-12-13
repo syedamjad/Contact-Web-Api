@@ -14,7 +14,7 @@ Database Entities
 
 Contact Entity
 
-public class ContactEntity
+    public class ContactEntity
     {
         [Key]
         public int Id { get; set; }
