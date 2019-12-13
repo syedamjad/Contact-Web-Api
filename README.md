@@ -11,7 +11,7 @@ Steps to configure in development environment
 5. Cross check that database is created successfully
 6. Build and Run the project, if everything is working you will see swagger page with the all endpoints as given below
 
-
+![alt text](https://github.com/syedamjad/Contact-Web-Api/blob/master/Screen%20shots/Swagger.PNG?raw=true)
 
 # Database Entities
 
