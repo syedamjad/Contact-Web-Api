@@ -29,10 +29,9 @@ namespace ContactWebApi
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Contact Web Api,", Version = "v1" });
             });
 
-            services.AddDbContext<ContactContext>(opts =>
+            services.AddDbContextPool<ContactContext>(opts =>
                 opts.UseSqlServer(Configuration["ConnectionString:ContactDB"]));
-            
-            services.AddSingleton<IContactRepository, ContactRepository>();
+            services.AddTransient<IContactRepository, ContactRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

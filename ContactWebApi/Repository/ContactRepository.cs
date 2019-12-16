@@ -14,11 +14,12 @@
     {
         private readonly ContactContext contactContext;
 
-        public ContactRepository(IConfiguration configuration)
+        public ContactRepository(IConfiguration configuration, ContactContext contactContext)
         {
             var optionsBuilder = new DbContextOptionsBuilder<ContactContext>();
             optionsBuilder.UseSqlServer(configuration["ConnectionString:ContactDB"]);
-            this.contactContext = new ContactContext(optionsBuilder.Options);
+            //this.contactContext = new ContactContext(optionsBuilder.Options);
+            this.contactContext = contactContext;
         }
         public IEnumerable<Contact> GetContacts()
         {
@@ -35,7 +36,8 @@
                 var mapper = config.CreateMapper();
                 var entity = this.contactContext.Contacts.FirstOrDefault(item => item.Id.Equals(contact.Id));
                 entity = mapper.Map(contact, entity);
-                this.contactContext.Contacts.Add(entity);
+                this.contactContext.Contacts.Update(entity);
+                //this.contactContext.Entry(entity).State = EntityState.Modified;
                 this.contactContext.SaveChanges();
             }
             else
